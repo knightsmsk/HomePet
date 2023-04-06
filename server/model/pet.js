@@ -69,7 +69,7 @@ let Pet = {
     },
     deletePet: (id) => {
         return new Promise((resolve, reject) => {
-            let index = data.findIndex(e => e.id ===id)
+            let index = data.findIndex(e => e.id === id)
             if (index<0) return reject ("Not found pet for delete "+ id);
             data.splice(index, 1)
             resolve(1)
