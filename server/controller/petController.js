@@ -26,7 +26,7 @@ export const get = (req, res) => {
             error: "Error retrieving Pet with id " +id
         });
     });
-};;
+};
 
 //update pet
 export const put = (req, res) => {
@@ -58,6 +58,10 @@ export const remove = (req, res) => {
             error: "Pet not found with id "+ req.params.id
         });
     })
+}
+
+export const lastPost = (req, res) => {
+    Pet.threeLastPet().then(result => res.json(result));
 }
 
 
